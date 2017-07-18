@@ -1,6 +1,7 @@
 FROM debian:jessie
 MAINTAINER “Brett Taylor” <sweet.brett@gmail.com>
 
+ENV DEBIAN_FRONTEND noninteractive
 ENV container docker
 
 RUN apt-get update ; \ 
