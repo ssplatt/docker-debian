@@ -6,7 +6,7 @@ ENV container docker
 
 RUN apt-get update ; \ 
   apt-get upgrade -y ; \
-  apt-get install -y systemd systemd-sysv ; \
+  apt-get install -y systemd systemd-sysv dbus; \
   apt-get clean ; \
   (cd /lib/systemd/system/sysinit.target.wants/; for i in *; do [ $i = systemd-tmpfiles-setup.service ] || rm -f $i; done) ; \
   rm -f /lib/systemd/system/multi-user.target.wants/* ; \
